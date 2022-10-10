@@ -22,6 +22,7 @@ public class UploadDeArquivoController {
     @PostMapping()
     public ResponseEntity<String> salvarArquivo(@RequestParam MultipartFile file){
         log.info("recebendo o arquivo: " + file.getOriginalFilename());
+        //create a paste on your computer and paste the path here
         var path = ("C:/Users/Johnny/Desktop/upload/imagens/"+file.getOriginalFilename());
         log.info("Novo nome do arquivo: " + file.getOriginalFilename());
         try{
